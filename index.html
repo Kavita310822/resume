@@ -63,9 +63,43 @@
             background-color: #4CAF50;
             color: white;
         }
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+        .header-message {
+            background-color: #ff9800;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .header-message a {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Header message -->
+    <div class="header-message">
+        <p>Thank you for resume consideration. Please visit again after every 3 months. 
+            For latest info visit <a href="https://kavita310822.github.io/resume/" target="_blank">https://kavita310822.github.io/resume/</a>
+        </p>
+    </div>
+
     <header>
         <h1>Kavita J. Bhartiya</h1>
         <p>Software Engineer | Full Stack Developer</p>
@@ -155,39 +189,6 @@
                     </ul>
                     <p>Description: BG is a small scale application wherein customers can login using their Customer Id and OTP to download their respective banking details.</p>
                 </div>
-                <div class="project-item">
-                    <h3>Project No: 3 - I-Rent</h3>
-                    <ul>
-                        <li><strong>Duration:</strong> 9 months</li>
-                        <li><strong>Team Size:</strong> 5</li>
-                        <li><strong>Technology:</strong> Web API, Angular</li>
-                        <li><strong>Database:</strong> SQL Server 2012</li>
-                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
-                    </ul>
-                    <p>Description: I-Rent manages the leasing process for Bank properties, including agreements, rent payouts, and additional charges like Water and Car Parking.</p>
-                </div>
-                <div class="project-item">
-                    <h3>Project No: 4 - RBI-Bonds</h3>
-                    <ul>
-                        <li><strong>Duration:</strong> 2.5 years</li>
-                        <li><strong>Team Size:</strong> 4</li>
-                        <li><strong>Technology:</strong> C# Web Forms, Web API, Angular, .Net Core</li>
-                        <li><strong>Database:</strong> SQL Server 2008, 2016, 2019</li>
-                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
-                    </ul>
-                    <p>Description: The RBI-Bonds module provides an end-to-end solution for banks to manage bond requests, including interest payouts and data reporting for RBI compliance.</p>
-                </div>
-                <div class="project-item">
-                    <h3>Project No: 5 - NRI-PIS</h3>
-                    <ul>
-                        <li><strong>Duration:</strong> 1.6 years</li>
-                        <li><strong>Team Size:</strong> 6</li>
-                        <li><strong>Technology:</strong> AJAX, ASP.NET Web Forms, C#, CSS, HTML, Angular</li>
-                        <li><strong>Database:</strong> SQL Server 2008, 2016, 2019</li>
-                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
-                    </ul>
-                    <p>Description: The NRI-PIS solution enables banks to facilitate NRI stock trading, including account management, transaction processing, and compliance reporting.</p>
-                </div>
                 <!-- Add more project details here -->
             </div>
         </div>
@@ -203,5 +204,35 @@
     <footer>
         <p>© 2025 Kavita J. Bhartiya. All rights reserved.</p>
     </footer>
+
+    <!-- Download Button -->
+    <a href="#" class="download-btn" id="downloadBtn">Download Resume</a>
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add the header
+            doc.setFontSize(12);
+            doc.setTextColor(255, 255, 255);
+            doc.setFillColor(255, 152, 0);  // Orange color for the header
+            doc.rect(0, 0, 210, 20, 'F');
+            doc.setTextColor(0, 0, 0);
+            doc.text('Thank you for resume consideration. Please visit again after every 3 months. For latest info visit https://kavita310822.github.io/resume/', 10, 15);
+
+            // Add the rest of the content
+            doc.html(document.querySelector('.container'), {
+                callback: function (doc) {
+                    doc.save('Resume-Kavita-Bhartiya.pdf');
+                },
+                x: 10,
+                y: 30
+            });
+        });
+    </script>
+
 </body>
 </html>
