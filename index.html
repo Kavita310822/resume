@@ -1,238 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Kavita J. Bhartiya</title>
+    <!-- CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<!-- JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+		body {
+			margin: 0;
+			padding: 0;
+		}
+        hr {
+            border: 1px solid grey;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        .img-circle {
+            border-radius: 50%;
         }
-        header h1 {
-            margin: 0;
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+			padding: 0px;
         }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .skills-left, .skills-right {
+            flex: 0.5 0 10%;
+            padding: 0px;
         }
-        h2 {
-            color: #4CAF50;
+        .rating {
+            font-size: 0.8em; /* Reduce the size of the icons */
+            color: #888; /* Change the color of the icons */
         }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section p {
-            line-height: 1.6;
-        }
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 10px 0;
-        }
-        .table th, .table td {
-            padding: 8px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        .table th {
-            background-color: #f2f2f2;
-        }
-        .project-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .project-item {
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
-        }
-        .download-btn {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .download-btn:hover {
-            background-color: #45a049;
-        }
-        .header-message {
-            background-color: #ff9800;
-            padding: 15px;
-            text-align: center;
-            font-size: 16px;
-        }
-        .header-message a {
-            color: white;
-            text-decoration: none;
-        }
+		.contact-info span {
+			display: inline-block;
+			margin-right: 10px;
+			justify-content: justify-between;
+		}
+		.contact-info i {
+			margin-right: 5px;
+			width: 8%;
+			word-wrap: break-word;
+		}
+		
+		.primary {
+			font-weight: bold;
+			color: grey;
+		}
+		.secondary {
+			color: grey;
+		}
+		
+		#printButton {
+			float: right;
+			font-size: 1em;
+			padding: 10px;
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 12px;
+		}
+
+		#printButton:hover {
+			background-color: #45a049; /* Darker green */
+		}
+		
+		@media print {
+			#printButton {
+				display: none;
+			}
+		}
     </style>
 </head>
-<body>
-
-    <!-- Header message -->
-    <div class="header-message">
-        <p>Thank you for resume consideration. Please visit again after every 3 months. 
-            For latest info visit <a href="https://kavita310822.github.io/resume/" target="_blank">https://kavita310822.github.io/resume/</a>
-        </p>
-    </div>
-
-    <header>
-        <h1>Kavita J. Bhartiya</h1>
-        <p>Software Engineer | Full Stack Developer</p>
-        <p>9+ years of experience in .Net Technologies</p>
-    </header>
-
+<body oncontextmenu="return false;">
     <div class="container">
-        <div class="section">
-            <h2>Profile Summary</h2>
-            <p>A dedicated professional with over 9+ years of combined experience as a software developer in developing Web, Desktop / WinForms based & services-oriented applications. Have worked on multiple projects often simultaneously for different domain modules such as ERP & Banking (Online payment & billing system with automated email & SMS service etc).</p>
-        </div>
+        <div class="row">
+		<div class="col-md-12">
+					<p class="secondary3" style="text-align:center; color:blue"><a href="https://kavita310822.github.io/resume/">For latest info visit https://kavita310822.github.io/resume/</a></p>
+					
+				</div>
+            <div class="col-md-8">
+                <h2 style="color:black; font-weight:bold;">Kavita J. Bhartiya</h2>
+                <h3 style="color:blue;">Senior Software Engineer</h3>
+                <p class="contact-info">
+					<span><i class="fas fa-phone"></i> +91 9821716765</span>
+					<span><i class="fas fa-envelope"></i> jiya081215@gmail.com</span>
+					<span><i class="fas fa-map-marker-alt"></i> Mumbai</span>
+				</p>
+            </div>
+            <div class="col-md-4">
+                <!-- Add your image source in src -->
+                <!-- <img src="image.jpg" alt="Profile Picture" class="img-fluid img-circle"> -->
+				<button id="printButton" onclick="window.print()">
+					<i class="fas fa-print"></i> Print this page
+				</button>
 
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <table class="table">
-                <tr>
-                    <th>Preferred Technology</th>
-                    <td>Angular, .Net Core Restful Web API, C#, Mssql, Micro-Services</td>
-                </tr>
-                <tr>
-                    <th>Basics</th>
-                    <td>Bootstrap, JavaScript, Html, Azure Cloud</td>
-                </tr>
-                <tr>
-                    <th>Database</th>
-                    <td>MS SQL 2008 / 12/ 16</td>
-                </tr>
-                <tr>
-                    <th>OS</th>
-                    <td>Windows 8/10</td>
-                </tr>
-            </table>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>Roles & Responsibilities</h2>
-            <p>Provide technical assistance to team whenever required in architecting the software. Develop assigned task/module/project.</p>
-        </div>
-
-        <div class="section">
-            <h2>Current Employer</h2>
-            <p><strong>Ember Technologies</strong> | <em>Sr. Software Developer</em> | August 2016 – Present</p>
-            <p><strong>Singum Technologies</strong> | <em>Jr. .Net Developer</em> | August 2015 – August 2016</p>
-        </div>
-
-        <div class="section">
-            <h2>Educational Qualification</h2>
-            <table class="table">
-                <tr>
-                    <th>School/College</th>
-                    <th>University/Board</th>
-                    <th>Month & Year Of Passing</th>
-                    <th>Percentage</th>
-                </tr>
-                <tr>
-                    <td>BSc (Information Technology)</td>
-                    <td>SIWS College, Mumbai</td>
-                    <td>April – 2012</td>
-                    <td>59.03%</td>
-                </tr>
-                <tr>
-                    <td>HSC</td>
-                    <td>SIWS College, Mumbai</td>
-                    <td>Feb– 2009</td>
-                    <td>61.33%</td>
-                </tr>
-                <tr>
-                    <td>SSC</td>
-                    <td>Sacred Heart High School, Maharashtra</td>
-                    <td>March – 2007</td>
-                    <td>69.23%</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>Projects</h2>
-            <div class="project-list">
+        <div class="row">
+			<div class="col-md-12">
+				<h3>Summary</h3>
+                <hr>
+                <p>With over 9+ years of experience in software engineering, I specialize in .NET technologies and robust web and service based applications. My diverse expertise in finance has enabled me to deliver solutions for multiple Indian Banking clients. My creativity and proven track record make me a reliable choice for complex software challenges.</p>
+			</div>
+            <div class="col-md-6">
+                <h3>Skills</h3>
+                <hr>
+                <div class="skills-section">
+					    <div class="skills-left">
+						<ul>
+							<li class="primary">C#, .Net Core, Restful API, MicroServices</li>
+							<li class="secondary">Angular, TypeScript, Bootstrap</li>
+							<li class="secondary">Basics - Cloud Azure</li>
+							<li class="secondary">MSSQL</li>
+							<li class="secondary">Swagger</li>
+						</ul>
+					</div>
+					<div class="skills-right">
+						<ul>
+							<li class="primary">Solution Designing</li>
+							<li class="primary">Good understanding of Design Patterns</li>
+							<li class="primary">Collaborative and Team Player</li>
+						</ul>
+					</div>
+				</div>
+            </div>
+            <div class="col-md-6">
+                <h3>Certifications</h3>
+                <hr>
+                <ul>
+                    <li>Microsoft:AZ-900(In Progress)</li>
+                </ul>
+				<!-- <br> -->
+				<h3>Education</h3>
+						<hr>
+						<ul>
+							<li>Graduation: <strong>Information Technology</strong></li>
+						</ul>
+						<!-- <br> -->
+					</div>
+                
+            </div>
+				<div>
+				<h3>Professional Experience <span style="font-size: 0.8em; font-weight: bold; color: #2E8B57;">9+ years</Span></h3>
+                <hr>
+                <h3 style="font-weight:bold;">Senior Software Engineer</h3>
+                <p>Ember Technologies <i class="fas fa-calendar-alt"></i> Sep 2016 to <i class="fas fa-calendar-alt"></i> Jan 2025 - Present <i class="fas fa-map-marker-alt"></i> Mumbai</p>
+                <p>Ember Technologies is an Indian information technology company that provides financial consulting, information technology and outsourcing services</p>
+                <ul>
+					<li>Design and develop software architecture, and code key components.</li>
+					<li>Lead the development team and ensured adherence to architectural guidelines.</li>
+					<li>Collaborated with stakeholders for software that meets business needs.</li>
+				</ul>
+                <!-- <br> -->
+                <h3 style="font-weight:bold;">Software Engineer</h3>
+					<h3>Employment History</h3>
+					<hr>
+					<ul>
+						<li><p><strong  style="color: grey;">Software Developer, Signum Technologies., Mumbai, Maharashtra, India (Oct 2014 - May 2016)</strong></p></li>
+					</ul>
+				</div>
+				 <h3 style="font-weight:bold;">Project & Work Highlights </h3>
+					<div class="project-list">
                 <div class="project-item">
-                    <h3>Project No: 2 - BG</h3>
+                    <h6>Project No: 1 - Insurance and BLO Billing (On-Going under UAT)</h6>
+                    <ul>
+                        <li><strong>Duration:</strong> 4 months</li>
+                        <li><strong>Team Size:</strong> 4</li>
+                        <li><strong>Technology:</strong> Web API, C#, Angular</li>
+                        <li><strong>Database:</strong> Oracle 19C</li>
+                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
+                    </ul>
+                    <p><strong>Description:</strong> Axis Bank is providing Health insurance services for its salary holders under PSU segments i.e. Defense, Police etc., the Insurance module in our application provides Bank with Insurance vendor management with segment –rate maintenance. Basis the configuration set and logic defined, system calculates the count and monthly premium and provides required reports to the user.
+Under the BLO module, Bank Lease Offsite is a third party business concept, since most of the ATM/ CRM machines are managed by IAD vendors and at times it is not profitable to them, at that time vendor ask the bank to close the site, in this case bank revisits the site from Banks perspective and checks if by removing this site will my cost increase. In this case Bank signs a bond with the vendor and converts it into a BLO where a fixed amount is paid (say Rs. 40000/-) monthly to the vendor. This logic is implemented in the application.
+</p>
+                </div>
+				<div class="project-item">
+                    <h6>Project No: 2 - NRI-PIS</h6>
+                    <ul>
+                        <li><strong>Duration:</strong> 1.6 years</li>
+                        <li><strong>Team Size:</strong> 6</li>
+                        <li><strong>Technology:</strong> AJAX, ASP.NET Web Forms, C#, CSS, HTML, Angular</li>
+                        <li><strong>Database:</strong> SQL Server 2008,  2016, 2019</li>
+                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
+                    </ul>
+                    <p><strong>Description:</strong> Stock markets in India have a provision to allow NRI to trade in Indian stock market with set off restrictions as governed by the RBI/SEBI. NRI PIS is a solution used by Banks which help them provide trade service via their stock broker or tie up brokers on behalf of the customer. This solution provides services like Customer On-boarding, Contract Note Capture (as received by the Broker), FIFO computation, TDS Set-off, Account Payout (Purchase/ Sell/ TDS/ Bank Charges/ GST). Along with this external data reporting to RBI and NSDL/ CSDL is also provided in this solution.
+</p>
+                </div>
+				<div class="project-item">
+                    <h6>Project No: 3 - RBI-Bonds (Axis Bank/ Kotak Bank) On-Going</h6>
+                    <ul>
+                        <li><strong>Duration:</strong> 2.5 years</li>
+                        <li><strong>Team Size:</strong> 3</li>
+                        <li><strong>Technology:</strong> C# Web Forms, Web API, Angular, .Net Core</li>
+                        <li><strong>Database:</strong> SQL Server 2008,  2016, 2019</li>
+                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
+                    </ul>
+                    <p><strong>Description:</strong> RBI provide RBI Bonds to its customers on similar lines as that of an FD deposit with a sole distinction of the interest payout being done by RBI instead of Bank in case of an FD. These bonds are secure in nature.
+Our RBI bond application provides an end to end solution to the bank to cater to RBI Bond request from the customer, from application on-boarding to BLA creation (Bond Account Number) – Half yearly interest payout for the bond tenure until bond maturity. It also prepares multiple Annexures as requested by RBI for data reporting purpose.
+This module is extended to Banks Internet Banking module as well to enable customers to directly invest in the bond with integration to banks internal API to provide hassle free experience to the customer.
+Also the system provides option for pre-maturity redemption in case of pre-closure basis on the lock-in policy as defined by RBI.
+</p>
+                </div>
+				<div class="project-item">
+                    <h6>Project No: 4 - I-Rent</h6>
+                    <ul>
+                        <li><strong>Duration:</strong> 10 months</li>
+                        <li><strong>Team Size:</strong> 5</li>
+                        <li><strong>Technology:</strong> C# Web Forms, Web API, Angular, .Net Core</li>
+                        <li><strong>Database:</strong> SQL Server 2008,  2016, 2019</li>
+                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
+                    </ul>
+                    <p><strong>Description:</strong> Bank normally leases out properties for opening Offsite ATM, Branches and Back-offices. Maintaining the property, agreement, landlord and monthly rent payouts manually for so many sites manually is tedious and time consuming. I-Rent serves as a solution for handling all these activities. System had a provision to capture, property – agreement – landlord details along with Escalation information along with Deposit / Recovery (if any) and accordingly compute monthly payouts for these entire premises zone wise. Along with rent system also had the provision to calculate monthly payouts for other charges catered to by the landlord like – Water Charges / Car Parking Charges etc.</p>
+                </div>
+				<div class="project-item">
+                    <h6>Project No: 5 - CCRS</h6>
+                    <ul>
+                        <li><strong>Duration:</strong> 3 years</li>
+                        <li><strong>Team Size:</strong> 2</li>
+                        <li><strong>Technology:</strong> C# Web Forms, Windows Service</li>
+                        <li><strong>Database:</strong> SQL Server 2008,  2016, 2019</li>
+                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
+                    </ul>
+                    <p><strong>Description:</strong> The purpose of this application is to facilitate bank branches to lodge customer disputes against transaction failures in case of non-auto reversal. These complaints can be lodged for multiple combination basis card type – transaction type – transaction mode (issuer/ acquirer) – complaint type. System had provision to lodge chargeback request with Pre-Arbitration/ Arbitration as well.</p>
+                </div>
+				<div class="project-item">
+                    <h6>Project No: 6 - BG</h6>
                     <ul>
                         <li><strong>Duration:</strong> 3 months</li>
                         <li><strong>Team Size:</strong> 2</li>
                         <li><strong>Technology:</strong> Web API, C#, Angular</li>
-                        <li><strong>Database:</strong> SQL Server 2012</li>
+                        <li><strong>Database:</strong> SQL Server 2016</li>
                         <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
                     </ul>
-                    <p>Description: BG is a small scale application wherein customers can login using their Customer Id and OTP to download their respective banking details.</p>
+                    <p><strong>Description:</strong> BG- a small scale application wherein customer can login into the portal using its Customer Id and OTP to download their respective Banking details.</p>
                 </div>
-                <!-- Add more project details here -->
+                <div class="project-item">
+                    <h6>Project No: 7 - School Management</h6>
+                    <ul>
+                        <li><strong>Duration:</strong> 1.5 years</li>
+                        <li><strong>Team Size:</strong> 2</li>
+                        <li><strong>Technology:</strong> Web API, C#, Angular</li>
+                        <li><strong>Database:</strong> SQL Server 2016</li>
+                        <li><strong>Roles:</strong> Development, unit testing, and documentation</li>
+                    </ul>
+                    <p><strong>Description:</strong> School management system - This application is used to input Student Details including attendance, marks details and providing report details accordingly.</p>
+                </div>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>Declaration</h2>
-            <p>I declare that the facts stated hereby are authentic and true to the best of my knowledge.</p>
-            <p><strong>Place:</strong> Mumbai</p>
-            <p><strong>Signature:</strong> Kavita J. Bhartiya</p>
+				</div>
+				
+			</div>
         </div>
     </div>
-
-    <footer>
-        <p>© 2025 Kavita J. Bhartiya. All rights reserved.</p>
-    </footer>
-
-    <!-- Download Button -->
-    <a href="#" class="download-btn" id="downloadBtn">Download Resume</a>
-
-    <!-- jsPDF Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function () {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            // Add the header
-            doc.setFontSize(12);
-            doc.setTextColor(255, 255, 255);
-            doc.setFillColor(255, 152, 0);  // Orange color for the header
-            doc.rect(0, 0, 210, 20, 'F');
-            doc.setTextColor(0, 0, 0);
-            doc.text('Thank you for resume consideration. Please visit again after every 3 months. For latest info visit https://kavita310822.github.io/resume/', 10, 15);
-
-            // Add the rest of the content
-            doc.html(document.querySelector('.container'), {
-                callback: function (doc) {
-                    doc.save('Resume-Kavita-Bhartiya.pdf');
-                },
-                x: 10,
-                y: 30
-            });
-        });
-    </script>
-
 </body>
 </html>
