@@ -82,6 +82,7 @@
     <div class="container">
         <div class="row">
 		<div class="col-md-12">
+            <p id="noticePeriod" style="font-weight: bold; color: red; text-align: center;">On Notice Period</p>
 					<p class="secondary3" style="text-align:center; color:blue"><a href="https://kavita310822.github.io/resume/">For latest info visit https://kavita310822.github.io/resume/</a></p>
 					
 				</div>
@@ -258,5 +259,29 @@ Also the system provides option for pre-maturity redemption in case of pre-closu
 			</div>
         </div>
     </div>
+
+    <script>
+        // Define the resignation date and notice period
+        const resignationDate = new Date("2025-06-06"); // Replace with the actual resignation date
+        const noticePeriodDays = 90;
+
+        // Calculate remaining days of notice period
+        function calculateRemainingDays() {
+            const today = new Date();
+            const differenceInTime = resignationDate.getTime() + (noticePeriodDays * 24 * 60 * 60 * 1000) - today.getTime();
+            const remainingDays = Math.ceil(differenceInTime / (1000 * 60 * 60 * 24));
+            return remainingDays > 0 ? remainingDays : 0;
+        }
+
+        // Display remaining days in the notice period element
+        const noticePeriodElement = document.getElementById("noticePeriod");
+        if (noticePeriodElement) {
+            const remainingDays = calculateRemainingDays();
+            noticePeriodElement.textContent = remainingDays > 0 
+                ? `Notice Period: ${remainingDays} days remaining` 
+                : "Notice Period has ended";
+        }
+    </script>
+
 </body>
 </html>
